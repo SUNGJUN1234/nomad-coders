@@ -39,7 +39,6 @@ if (typeof g === 'string') {
 function hello() {
     console.log("hello");
 }
-hello();
 // never는 오류 반환
 function noReturn() {
     throw new Error("never return function");
@@ -56,3 +55,20 @@ function test(name) {
         name; // never
     }
 }
+var add = function (a, b) { return a + b; }; // call signature로 return을 해줄 필요가 없다.
+console.log(add(2, 6));
+var push = function (config) {
+    if (typeof config === "string") {
+        console.log(config);
+    }
+    else {
+        console.log(config.path);
+    }
+};
+var div = function (a, b, c) {
+    return a + b;
+};
+var superPrint = function (arr) { return arr[0]; };
+var aa = superPrint([1, 2, 3, 4]); // const aa: number
+var bb = superPrint([true, false, true]); // const bb: boolean
+var cc = superPrint(["true", 0, true]); // const cc: string | number | boolean
