@@ -37,6 +37,11 @@ nico.age = 12;
 
 const tuple: [string, number, boolean] = ["123", 123, true];
 
+// any 는 ts 를 빠져나간다
+const anyArr : any[] = [1,2,3];
+const anyBln : any = true;
+anyArr + anyBln;
+
 let g: unknown;
 
 if(typeof g === 'number'){
