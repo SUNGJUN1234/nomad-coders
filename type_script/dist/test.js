@@ -70,5 +70,18 @@ var div = function (a, b, c) {
 };
 var superPrint = function (arr) { return arr[0]; };
 var aa = superPrint([1, 2, 3, 4]); // const aa: number
+var aa2 = superPrint([1, 2, 3, 4]);
 var bb = superPrint([true, false, true]); // const bb: boolean
 var cc = superPrint(["true", 0, true]); // const cc: string | number | boolean
+var ssPrint = function (a) { return (a[0]); };
+var dd = ssPrint(["true", 0, true], "a"); // const ssPrint: <string | number | boolean, string>(a: (string | number | boolean)[], b: string) => string | number | boolean
+var sjcho = {
+    name: "sjcho",
+    extraInfo: {
+        favFood: "hbg"
+    }
+};
+var nullcho = {
+    name: "ncho",
+    extraInfo: null
+};
